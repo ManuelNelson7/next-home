@@ -5,7 +5,7 @@ import HomeList from './HomeList'
 
 const Main = () => {
     return (
-        <View style={{ marginTop: Constants.statusBarHeight, flexGrow: 1 }}>
+        <View style={{ marginTop: Constants.statusBarHeight, flexGrow: 1, backgroundColor: '#F9F9F9' }}>
             <HomeList />
         </View>
     )
