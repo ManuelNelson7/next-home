@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
+import { dolarString } from '../utils/utils'
 
 const Card = ({ property }) => {
   return (
@@ -11,7 +12,7 @@ const Card = ({ property }) => {
 
         <View style={styles.row}>
           <Text style={styles.price}>
-            ${property.price.toFixed(2)}
+           {dolarString(property.price)}
           </Text>
           <Text style={[styles.type, property.type === 'rent' ? styles.rent : styles.buy]}>
             {property.type}
@@ -26,16 +27,14 @@ const Card = ({ property }) => {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
-    paddingBottom: 5,
-    paddingTop: 5,
+    padding: 10,
     backgroundColor: '#fff',
     width: 275,
     borderRadius: 12,
     gap: 5,
   },
   imageCard: {
-    height: 150,
+    height: 170,
     width: 'full',
     borderRadius: 12
   },
